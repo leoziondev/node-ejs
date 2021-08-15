@@ -1,0 +1,20 @@
+<%- include('../partials/head', {title: 'Home'}); %>
+<%- include('../partials/header'); %>
+
+<main class="container mx-auto pt-20 px-4 md-px-0" style="min-height: 90vh;">
+    <div class="bg-white shadow-sm p-4 rounded">
+        <h1 class="text-2xl font-bold text-gray-700">Node com EJS</h1>
+        <p class="text-gray-500">Vamos aprender Template View com arquivos EJS</p>
+        <p class="text-gray-500"><%= subtitle %></p>
+    </div>
+
+    <ul class="mt-4">
+        <% qualitys.forEach(function (quality) { %>
+            <li class="p-2 bg-indigo-200 mb-2 rounded text-indigo-700 flex">
+                <span class="flex items-center justify-center w-6 h-6 bg-indigo-500 text-white font-bold rounded mr-2"><%= quality.title %></span> <%= quality.message %>
+            </li>
+        <% }) %>
+    </ul>
+</main>
+
+<%- include('../partials/footer'); %> 
